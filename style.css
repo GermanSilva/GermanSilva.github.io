@@ -1,4 +1,8 @@
 @import 'https://fonts.googleapis.com/css?family=Montserrat:300, 400, 700&display=swap';
+@import 'https://fonts.googleapis.com/css2?family=Alata&display=swap';
+:root {
+	--Main-font: 'Alata', sans-serif;
+}
 * {
 	padding: 0;
 	margin: 0;
@@ -33,6 +37,7 @@ p {
 	letter-spacing: 0.05rem;
 }
 .section-title {
+	font-family: var(--Main-font);
 	font-size: 4rem;
 	font-weight: 300;
 	color: black;
@@ -45,12 +50,13 @@ p {
 	color: #7952B3;
 }
 
-.cta {
+.yvbtn {
 	display: inline-block;
 	padding: 10px 30px;
 	color: white;
 	background-color: transparent;
 	border: 2px solid #7952B3;
+	border-radius: 15px 0;
 	font-size: 2rem;
 	text-transform: uppercase;
 	letter-spacing: 0.1rem;
@@ -58,8 +64,8 @@ p {
 	transition: 0.3s ease;
 	transition-property: background-color, color #7952B3;
 }
-.cta:hover {
-	color: white;
+.yvbtn:hover {
+	color: white!important;
 	background-color: #7952B3;
 }
 .brand h1 {
@@ -69,6 +75,7 @@ p {
 }
 .brand h1 span {
 	color: #7952B3;
+	font-family: var(--Main-font);
 }
 
 /* Header section */
@@ -198,15 +205,15 @@ p {
 }
 /* End Header section */
 
-/* Hero Section */
-#hero {
-	background-image: url(./img/bg.jpg);
+/* Home Section */
+#home {
+	background-image: url(./img/bg-1.jpg);
 	background-size: cover;
 	background-position: top center;
 	position: relative;
 	z-index: 1;
 }
-#hero::after {
+#home::after {
 	content: '';
 	position: absolute;
 	left: 0;
@@ -217,14 +224,14 @@ p {
 	opacity: 0.7;
 	z-index: -1;
 }
-#hero .hero {
+#home .home {
 	max-width: 1200px;
 	margin: 0 auto;
 	padding: 0 50px;
 	justify-content: flex-start;
 }
 
-#hero h1 {
+#home h1 {
 	display: block;
 	width: fit-content;
 	font-size: 4rem;
@@ -233,17 +240,17 @@ p {
 	animation: text_reveal 0.5s ease forwards;
 	animation-delay: 1s;
 }
-#hero h1:nth-child(1) {
+#home h1:nth-child(1) {
 	animation-delay: 1s;
 }
-#hero h1:nth-child(2) {
+#home h1:nth-child(2) {
 	animation-delay: 2s;
 }
-#hero h1:nth-child(3) {
+#home h1:nth-child(3) {
 	animation: text_reveal_name 0.5s ease forwards;
 	animation-delay: 3s;
 }
-#hero h1 span {
+#home h1 span {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -253,38 +260,41 @@ p {
 	animation: text_reveal_box 1s ease;
 	animation-delay: 0.5s;
 }
-#hero h1:nth-child(1) span {
+#home h1:nth-child(1) span {
 	animation-delay: 0.5s;
 }
-#hero h1:nth-child(2) span {
+#home h1:nth-child(2) span {
 	animation-delay: 1.5s;
 }
-#hero h1:nth-child(3) span {
+#home h1:nth-child(3) span {
 	animation-delay: 2.5s;
 }
 
-/* End Hero Section */
+/* End Home Section */
 
-/* Services Section */
-#services .services {
+/* busqueda Section */
+#busqueda .busqueda {
 	flex-direction: column;
 	text-align: center;
 	max-width: 1500px;
 	margin: 0 auto;
 	padding: 100px 0;
 }
-#services .service-top {
+#busqueda .busqueda-boton {
 	max-width: 500px;
 	margin: 0 auto;
 }
-#services .service-bottom {
+.busqueda-boton .yvbtn{
+	color:#7952B3;
+}
+#busqueda .busqueda-cuadros {
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	flex-wrap: wrap;
 	margin-top: 50px;
 }
-#services .service-item {
+#busqueda .busqueda-item {
 	flex-basis: 80%;
 	display: flex;
 	align-items: flex-start;
@@ -301,14 +311,14 @@ p {
 	overflow: hidden;
 	filter: hue-rotate(62deg) saturate(1.5);
 }
-#services .service-item-title {
+#busqueda .busqueda-item-title {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
 	justify-content: center;
     width: 100%;
 }
-#services .service-item::after {
+#busqueda .busqueda-item::after {
 	content: '';
 	position: absolute;
 	left: 0;
@@ -319,44 +329,44 @@ p {
 	opacity: 0.9;
 	z-index: -1;
 }
-#services .service-bottom .icon {
+#busqueda .busqueda-cuadros .icon {
 	height: 80px;
 	width: 80px;
 	margin-bottom: 20px;
 	margin-right: 20px;
 }
-.service-bottom a {
+.busqueda-cuadros a {
     width: 88%;
 }
-#services .service-item h2 {
+#busqueda .busqueda-item h2 {
 	font-size: 2rem;
 	color: white;
 	margin-bottom: 10px;
 	text-transform: uppercase;
 }
-#services .service-item p {
+#busqueda .busqueda-item p {
 	color: white;
 	text-align: left;
 }
-/* End Services Section */
+/* End busqueda Section */
 
-/* Projects section */
-#projects .projects {
+/* viajes section */
+#viajes .viajes {
 	flex-direction: column;
 	max-width: 1200px;
 	margin: 0 auto;
 	padding: 100px 0;
 }
-#projects .projects-header h1 {
+#viajes .viajes-header h1 {
 	margin-bottom: 50px;
 }
-#projects .all-projects {
+#viajes .all-viajes {
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
 }
-#projects .project-item {
+#viajes .project-item {
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -367,7 +377,7 @@ p {
 	overflow: hidden;
 	border-radius: 10px;
 }
-#projects .project-info {
+#viajes .project-info {
 	padding: 30px;
 	flex-basis: 50%;
 	height: 100%;
@@ -378,25 +388,25 @@ p {
 	background-image: linear-gradient(36deg, #444444 0%, #7952b3 100%);
 	color: white;
 }
-#projects .project-info h1 {
+#viajes .project-info h1 {
 	font-size: 4rem;
 	font-weight: 500;
 }
-#projects .project-info h2 {
+#viajes .project-info h2 {
 	font-size: 1.8rem;
 	font-weight: 500;
 	margin-top: 10px;
 }
-#projects .project-info p {
+#viajes .project-info p {
 	color: white;
 }
-#projects .project-img {
+#viajes .project-img {
 	flex-basis: 50%;
 	height: 300px;
 	overflow: hidden;
 	position: relative;
 }
-#projects .project-img:after {
+#viajes .project-img:after {
 	content: '';
 	position: absolute;
 	left: 0;
@@ -406,13 +416,13 @@ p {
 	background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
 	opacity: 0.1;
 }
-#projects .project-img img {
+#viajes .project-img img {
 	transition: 0.3s ease transform;
 }
-#projects .project-item:hover .project-img img {
+#viajes .project-item:hover .project-img img {
 	transform: scale(1.1);
 }
-/* End Projects section */
+/* End viajes section */
 
 /* About Section */
 #about .about {
@@ -438,7 +448,7 @@ p {
 #about .col-right p {
 	margin-bottom: 20px;
 }
-#about .col-right .cta {
+#about .col-right .yvbtn {
 	color: black;
 	margin-bottom: 50px;
 	padding: 10px 20px;
@@ -509,7 +519,7 @@ p {
 
 /* Footer */
 #footer {
-	background-image: linear-gradient(15deg, #444444 0%, #7952b3 100%);
+	background-image: linear-gradient(180deg, #444444 0%, #442d67 100%);
 }
 #footer .footer {
 	min-height: 200px;
@@ -522,8 +532,8 @@ p {
 	font-weight: 500;
 	font-size: 1.8rem;
 	letter-spacing: 0.1rem;
-	margin-top: 10px;
-	margin-bottom: 10px;
+	margin: 10px;
+	text-align: center;
 }
 #footer .social-icon {
 	display: flex;
@@ -583,7 +593,7 @@ p {
 
 /* Media Query For Tablet */
 @media only screen and (min-width: 768px) {
-	.cta {
+	.yvbtn {
 		font-size: 2.5rem;
 		padding: 20px 60px;
 	}
@@ -591,36 +601,34 @@ p {
 		font-size: 6rem;
 	}
 
-	/* Hero */
-	#hero h1 {
+	/* Home */
+	#home h1 {
 		font-size: 7rem;
 	}
-	/* End Hero */
+	/* End Home */
 
-	/* Services Section */
-	#services .service-bottom .service-item, .service-bottom a  {
+	/* busqueda Section */
+	#busqueda .busqueda-cuadros .busqueda-item, .busqueda-cuadros a  {
 		flex-basis: 45%;
 		margin: 2.5%;
 	}
-	/* End Services Section */
+	/* End busqueda Section */
 
 	/* Project */
-	#projects .project-item {
-		flex-direction: row;
-	}
-	#projects .project-item:nth-child(even) {
+	#viajes .project-item:nth-child(even) {
 		flex-direction: row-reverse;
 	}
-	#projects .project-item {
-		height: 400px;
-		margin: 0;
+	#viajes .project-item {
+		flex-direction: row;
+		height: 300px;
+		margin: 10px;
 		width: 100%;
-		border-radius: 0;
+		border-radius: 40px;
 	}
-	#projects .all-projects .project-info {
+	#viajes .all-viajes .project-info {
 		height: 100%;
 	}
-	#projects .all-projects .project-img {
+	#viajes .all-viajes .project-img {
 		height: 100%;
 	}
 	/* End Project */
@@ -710,7 +718,7 @@ p {
 	}
 	/* End header */
 
-	#services .service-bottom .service-item, .service-bottom a {
+	#busqueda .busqueda-cuadros .busqueda-item, .busqueda-cuadros a {
 		flex-basis: 21%;
 		margin: 1.5%;
 	}
