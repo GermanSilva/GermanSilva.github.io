@@ -1,7 +1,8 @@
 @import 'https://fonts.googleapis.com/css?family=Montserrat:300, 400, 700&display=swap';
 @import 'https://fonts.googleapis.com/css2?family=Alata&display=swap';
 :root {
-	--Main-font: 'Alata', sans-serif;
+	--font-1: 'Alata', sans-serif;
+	--font-2: 'Montserrat', sans-serif;
 }
 * {
 	padding: 0;
@@ -16,7 +17,7 @@ html {
 a {
 	text-decoration: none;
 }
-.container {
+.container-yv {
 	min-height: 100vh;
 	width: 100%;
 	display: flex;
@@ -37,7 +38,7 @@ p {
 	letter-spacing: 0.05rem;
 }
 .section-title {
-	font-family: var(--Main-font);
+	font-family: var(--font-1);
 	font-size: 4rem;
 	font-weight: 300;
 	color: black;
@@ -49,7 +50,9 @@ p {
 .section-title span {
 	color: #7952B3;
 }
-
+.txt-clr1 {
+	color: #7952B3!important;
+}
 .yvbtn {
 	display: inline-block;
 	padding: 10px 30px;
@@ -75,7 +78,7 @@ p {
 }
 .brand h1 span {
 	color: #7952B3;
-	font-family: var(--Main-font);
+	font-family: var(--font-1);
 }
 
 /* Header section */
@@ -269,7 +272,6 @@ p {
 #home h1:nth-child(3) span {
 	animation-delay: 2.5s;
 }
-
 /* End Home Section */
 
 /* busqueda Section */
@@ -517,6 +519,76 @@ p {
 }
 /*End contact Section */
 
+/* Login Section */
+#login {
+    flex-direction: column;
+}
+#login-page {
+	font-family: var(--font-2);
+}
+#login a:hover {
+    color: #7952b3c7;
+}
+#login a {
+    color: #7952b3;
+}
+#login .card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: 1.25rem;
+    font-size: 2rem;
+	min-width: 455px;
+    padding: 4rem 6%;
+}
+#login h2 {
+    font-size: 3rem;
+	text-align: center;
+}
+#login .form-control {
+    display: block;
+    width: 100%;
+    padding: .375rem .75rem;
+	margin: 20px 0;
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.form-check-input:checked {
+    background-color: #7952b3;
+    border-color: #7952b3;
+}
+.form-switch .form-check-input:checked {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e")!important;
+}
+.form-switch .form-check-input:focus {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%237952b3'/%3e%3c/svg%3e");
+}
+.form-check-input:focus {
+    border-color: #7952b3;
+    box-shadow: 0 0 0 0.25rem rgb(121 82 179 / 25%);
+}
+#login .login-btn {
+    display: grid;
+}
+#login .login-newacc {
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
 /* Footer */
 #footer {
 	background-image: linear-gradient(180deg, #444444 0%, #442d67 100%);
@@ -691,6 +763,12 @@ p {
 		padding-left: 20px;
 	}
 	/* End contact  */
+
+		/* LOGIN */
+		#login .card {
+			width: 70%;
+			padding: 4rem 4rem;
+		}
 }
 /* End Media Query For Tablet */
 
@@ -721,6 +799,12 @@ p {
 	#busqueda .busqueda-cuadros .busqueda-item, .busqueda-cuadros a {
 		flex-basis: 21%;
 		margin: 1.5%;
+	}
+
+	/* LOGIN */
+	#login .card {
+		width: 70%;
+		padding: 4rem 4rem;
 	}
 }
 /* End  Media Query For Desktop */
